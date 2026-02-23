@@ -3,11 +3,36 @@ name : Testing github workflow
 on: push
 
 jobs:
-  init:
+  integration-continue:
+    name: Demonstration CI
     runs-on: ubuntu-latest
 
+    env:
+        STEP1: "le code vient d'etre pousse sur github"
+
     steps:
-      - run: echo "Etape3-Build"
-      - run: echo "$HOSTNAME"
+      - name: Etape1-Initialisation
+        run: |
+          echo ""
+          echo "STEP1: $STEP1"
+      - name: Etape 2-Recuperation du code
+        run: |
+          echo "Recuperation du code source"
+          echo "STEP2: ${{vars.STEP2}}"
+      - name: Etape 3 - Build
+        run: |
+          echo "Phase de build"
+          echo "STEP3: ${{secrets.MY_SECRET}}"
+      - name: Etape 4 - Tests
+        run: |
+            echo "Phase de tests"
+            echo "STEP4: ${{secrets.MY_SECRET}}"
+          
+    
+    
+    
+    
+    
+    
     
       
