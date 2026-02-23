@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Initialisation"
+      - run: echo "Recuperation du code"
       - run: echo "$HOSTNAME"
     
       
