@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Set up job"
+      - run: echo "Initialisation"
       - run: echo "$HOSTNAME"
     
       
